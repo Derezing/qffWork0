@@ -1,0 +1,183 @@
+/*css文件*/
+body,ul,h1,h2,h3,h4,dl,dd,form,input,textarea,select {padding: 0;margin: 0; font_family:arial;}
+li {list-style: none;}
+img {border: none;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline;}
+body {background: #fff url(../images/body_bg.png) repeat-x; }
+
+#top {width:960px; height: 12px;/*为30时下面shopping部分下移太多了*/ margin: 0 auto;}
+
+.top_menu {float:left;}
+.top_menu li {float:left; background: url(../images/top_ico.png) no-repeat right 14px; font-size: 13px; line-height: 30px;/*居中*/  padding-right: 18px; margin-right: 15px;}
+/*和右边导航栏元素的距离为margin 15px; 和自己里面的元素“点”的距离为padding 18px;*/
+.top_menu a { color:#c0c0c0;}
+.top_menu a:hover {color:#fff;}/*鼠标移上去变白*/
+.top_menu .no_dot {background:none; padding: 0; margin: 0;/*将这个点占的空间去掉*/}/*去掉“Contact”后面的那个点*/
+
+.top_bar {float: right;}
+.top_bar li {float:left;height: 30px; color: #fff; font-weight: bold;font-size: 13px;line-height: 30px;/*居中*/ /*padding: 0 38px 0 ;*/}
+.top_bar .phone { background: url(../images/top_ico.png) no-repeat 8px/*电话图标与电话号码距离变小了*/ -16px;/*上去16px*/ padding: 0 /*上，左右，下*/ 38px 0 ;}
+.top_bar .help { background: url(../images/top_ico.png) no-repeat 0 -46px; padding: 0 /*上，左右，下*/ 38px 0 ;}
+.top_bar .help a { color: #fff; }
+/*solve:IE6国旗图标偏上*/
+.sbie6_img img {float: left; position: relative; top: 10px;}
+
+.top_bar .space {margin: 0 12px 0;/*两国旗图标的距离*/}
+
+#header {width: 960px; height: 100px; margin: 0 auto;/*居中*/ position: relative; background: url("../images/header_bg.png") no-repeat;}
+#shopping {width: 260px; height: 100px; background: url("../images/shopping_bg.png") no-repeat; position: relative;}
+#shopping p { color: #f7f7f7; font-size: 20px; font-family: arial; padding: 30px 0 0 84px; }
+#shopping a { display:block; width: 114px; height: 23px; background: url("../images/shopping_bg.png") no-repeat 0 -100px;/*左边0，向上移动100px*/ position: absolute; top: 63px; left:104px; font: 15px; color: #ffc200; text-decoration: none; font-weight: bold; text-align: center; line-height: 23px;}
+#shopping a:hover { color: #ffe388;}
+
+#header h1 { width: 238px; position: absolute; top:0; left: 50%; margin-left: -119px;}/*绝对位置，需要父元素相对定位*/
+
+#header .search { top: 30px;right: 0;}
+
+.search {width: 292px;height: 31px; background: url("../images/search_bg.png") no-repeat; position: absolute;}
+.search .text {position: absolute;top: 0;left: 20px;/*将float: left;替换为绝对定位，下行相同*/ width: 230px; height: 30px; line-height: 30px;/*解决IE6不兼容问题 搜索框文字偏上*/ background: none; border: none; font-size: 13px; color: #666; outline: none;/*去掉eg:Chrome正在输入时自动加入的丑框*/}
+/*将left: 0;width: 250px; 替换为left: 20px; width: 230px;，实现文本框的文字距离搜索框左边20px */
+.search .btn {position: absolute;top: 0;right: 0; width: 42px; height: 30px; background: none; border: none;}
+
+#nav { height: 36px;/*44-8px*/ width: 960px; padding-top: 8px;/*home按钮和此导航栏上部距离8*/ margin: 0 auto;}
+#nav li {float: left; height: 28px; margin-right: 2px;/*导航栏按钮间距*/}
+#nav a { float: left; height: 26px; text-decoration: none; color: #fff; font-size: 15px; font-family: arail; line-height: 26px;/*居中*/ cursor: pointer;/*解决IE6不兼容问题*/}
+#nav strong {float: left; height: 26px; font-weight: normal;}
+#nav span {float: left; height: 26px; padding: 0 16px;}
+
+#nav a:hover ,#nav .active a/*第一个默认有背景*/{ background: url("../images/nav_active_bg.png") repeat-x 0 -52px;/*平铺图片，左边为0，上去26*2=56px 原来28px*/}
+#nav a:hover strong, #nav .active strong { background: url("../images/nav_active_bg.png") no-repeat/*0 0 可以省略*/;}
+#nav a:hover span, #nav .active span { background: url("../images/nav_active_bg.png") no-repeat right -26px;}
+
+/*=============================*/
+
+#content {width: 1000px; height: 1372px; margin: 24px auto 0; background: url("../images/content_bg.png") repeat-y -1000px 0;}
+#content_top {width: 1000px; background: url("../images/content_bg.png") no-repeat 0 0;}
+#content_bottom {width: 1000px; background: url("../images/content_bg.png") no-repeat -2000px bottom;/*底部那一块位于这张图的右侧，即2000px，垂直方向为底部*/ padding-top: 10px;}
+
+#ad {width: 940px; height: 300px; position: relative; margin: 0 auto;}
+#ad ul, #ad li, #ad h2, #ad p {position: absolute; }
+#ad ul { top: 0; left: 0; z-index: 1; }
+#ad li { top: 0; left: 0; }
+#ad h2 { bottom: 10px;left: 0; z-index: 3; width: 268px; text-align: center; font-size: 25px; color: #ffc600;}
+#ad p { bottom: 0;/*7px*/ left: 268px; z-index: 3; color: #fcc; font-size: 13px; line-height: 16px; width: 630px;}
+#ad .bg {width: 940px; height: 52px; background-color: #000; filter: alpha(opacity=82); opacity: 0.8;/*标准浏览器下*//*不透明度80%*/ position: absolute; bottom: 0;left: 0; z-index: 2;}
+
+#main {width: 942px; margin: 0 auto; padding-top: 30px; }
+#side {width: 210px; float: left; overflow: hidden;}
+#wrap { width: 706px; float: right;}
+
+/*一个盒子里使用了CSS float浮动属性，导致父级对象盒子不能被撑开，这样CSS float浮动就产生了。(父级无height时)*/
+.clear {zoom:1;/*父级（main）有width时可不写*/}
+.clear :after/*注意：冒号和after之间不要有空格！！！*/ { content:''; display:block; clear: both; }
+
+.module_menu { margin-bottom: 12px; }
+.module_menu h2 { height: 29px; font-size: 15px; color: #fff; line-height: 28px; text-align: center; background: url("../images/module_menu_bg.png") repeat-x 0 -58px; margin-bottom: 1px; }
+.module_menu h2 strong{float: left;/*A不写上方会出现多余颜色*/ display:　block;/*注意不要拼错单词啊宝贝！*/  height: 29px; background: url("../images/module_menu_bg.png") no-repeat; }/*strong和span是行内元素，需要加上display:block;使之变为块级元素*/
+.module_menu h2 span { display:-moz-inline-box; display:inline-block; width: 210px;/*A改变宽度，display:　block;无作用！？*/  height: 29px; background: url("../images/module_menu_bg.png") no-repeat right -29px; }
+
+/*****************************/
+/*bug区 宽度问题---------已解决*/
+
+.list {background: url("../images/list_bg.png") repeat-y; /*padding: 8px;不靠谱*/}
+.list ul {  display:　block;background: url("../images/list_bg.png") no-repeat -210px bottom; padding: 18px 8px 15px 0;}
+.list li { height: 27px; position: relative;/*add+2*/ vertical-align: text-bottom;}
+.list a {display: block;/*一定要加这个啊宝贝，否则宽高变不了啊*/ width: 178px;/*210-32*/ height: 27px;  /*line-height: 27px; padding-top: 6px;*/ border-bottom: 1px solid #fff; color: #434343; text-decoration: none; font-weight: bold; font-size: 12px; padding-left: 32px; /*add*/position: absolute; bottom: 0;}
+.list a:hover { color: #b20e00; border-bottom: 1px solid #b20e00; background: #fae191; text-decoration: none;/*解决IE6不兼容问题*/}
+
+/*****************************/
+/*bug区 背景出不来----------90%解决---背景图片放在join_form, ~p, ?而不是module_join, ~_t, ~_b*/
+
+.mudule_join { float: left; width: 210px; background-color: #099; border: 2px solid #000;}
+.mudule_join_t {/* background: url("../images/list_bg.png") no-repeat -420px 0;*/ }
+.mudule_join_b { }
+
+.join_form {width: 210px; margin: 0 auto 12px; background: url("../images/list_bg.png") repeat-y -630px 0;}
+.join_form  p {font-size: 15px; color: #666; line-height: 18px; padding: 12px 16px; background: url("../images/list_bg.png") no-repeat -420px 0;}
+.join_form .text{width: 175px; height: 25px; line-height: 25px; background-color: #fff; border: 1px solid #fff; border-top: 1px solid #9c9c9c; border-left: 1px solid #c0c0c0; margin-bottom: 6px; margin-left: 16px;}
+.join_form .btn {width: 88px; height: 25px; border: none; font-size: 15px; color: #fff;  font-weight: bold; background: url("../images/join_form_bg.png"); margin: 0 auto; display: block;}
+.join_list {width: 192px; margin: 0 auto; background: url("../images/join_form_bg.png") no-repeat 10px -25px;}
+/*.join_list li { border-top: 1px solid #fff;padding-left: 62px; color: #434343; font-size: 13px;}*/
+
+#join_form_bottom { background: url("../images/list_bg.png") no-repeat -840px bottom;}
+.space1, .space2, .space3, .space4 { border-top: 1px solid #fff;padding-left: 62px; color: #434343; font-size: 13px;} 
+.space1 { height: 45px; line-height: 45px;}
+.space2 { height: 43px;/*48-5-5px*/ padding-top: 5px; line-height: 18px;}
+.space3, .space4 { height: 45px; padding-top: 5px; line-height: 18px; }
+/*设置CSS padding是会增加对象宽度和高度尺寸的，所以在实际布局时候要计算好宽度，如果要规定总宽度，别忘记设置padding要减去相应设置值，达到布局宽度要求*/
+
+#payment {height: 184px; margin: 33px 0 0 18px;}
+/*一个盒子里使用了CSS float浮动属性，导致父级对象盒子不能被撑开，这样CSS float浮动就产生了(父级无height时)。*/
+.sort { height: 20px; }
+.sort dl {float: left;}
+.sort dt {float: left; color: #747474; font-weight: bold; font-size: 12px; padding-right: 2px;}
+.sort dd {float: left; position: relative; width: 109px; height: 19px; margin-right: 12px;}
+.sort h2 {width: 108px; height: 17px; border: 1px solid #ccc; font-size: 12px; color: #747474; font-weight: normal; text-indent: 5px;/*文本缩进，也可用padding实现框内文字与框的距离*/}
+.sort a {position: absolute; top:0; left: 90px; width: 19px; height: 19px; background: url("../images/payment_sort.png"); z-index: 2;/*让<a>在下拉框<ul>的上方*/}/*行内元素<a>不能设置宽高，可用绝对定位解决(父级dd相对定位)*/
+.sort a:hover {background: url("../images/payment_sort.png") -19px 0;}
+.sort ul { width: 108px; border: 1px solid #ccc; position: absolute; top: 18px; left: 0; display: none;/*暂时隐藏*/}
+.sort li {font-size: 12px; line-height: 20px;text-indent: 5px; cursor: pointer;/*光标呈现为指示链接的指针（一只手）*/}
+.sort .active1 {background-color: #099; color: #fff;}
+.sort p { float:right;color: #747474; font-size: 12px;}
+.sort p strong {color: #999;}
+.sort p span {padding: 0 5px;}
+.spanStyle, .spanStyle3{ white-space: nowrap;/************强制span,strong不换行************/ display: inline-block;/*将span当做块级元素对待*/ /* width: 32px;限制宽度  overflow: hidden;超出宽度部分隐藏 text-overflow: ellipsis;超出部分以点号代替 line-height: 0.9;数字与之前的文字对齐*/}
+.spanStyle3{color: #b20e00; }
+
+.pic_list {width: 706px; overflow: hidden;/*隐藏子元素相对于父元素的超界溢出*/}
+.pic_list h2, #scroll_list h2 {font-size: 18px; color: #666; height: 58px;/*有行高时可以不设置*/  line-height: 58px;}
+/*一个盒子里使用了CSS float浮动属性，导致父级对象盒子不能被撑开，这样CSS float浮动就产生了(父级无height时)。*/
+.pic_list ul { width: 736px;/*184*4*/}
+.pic_list li {float: left; width: 182px; height: 200px;}
+.pic_list a {display: block; width: 154px; height: 114px; border: 1px solid #c6c6c6; margin-bottom: 6px; }
+.pic_list a:hover {border: 1px solid #663;}
+.pic_list h3 {color: #666; font-size: 15px; line-height: 16px; }
+.pic_list p {color: #333; font-size: 13px; }
+.pic_list span { color: #b20e00; }
+
+.page { text-align: center; border-bottom: 1px solid #cdcdc8; padding-bottom: 5px;}
+.page a {display: inline-block; height: 20px; line-height: 20px; padding: 0 8px;/*挤出宽度*/ color: #b20e00; text-decoration: none; font-size: 12px;}
+.page a:hover, .page .active {color: #fff; background: #b20e00;}
+.page span { font-family: '宋体'; font-weight: bold;}
+
+#scroll_list {border: 1px solid #099;}
+#scroll_wrap {height: 196px; background: url("../images/scroll_bg.png") repeat-x 0 -478px;}
+#scroll_wrap_l {height: 196px; background: url("../images/scroll_bg.png") no-repeat 0 -86px;}
+#scroll_wrap_r {height: 196px; background: url("../images/scroll_bg.png") no-repeat right -282px; position: relative;}
+
+#scroll_wrap_r .prev, #scroll_wrap_r .next {width: 35px; height: 43px; position:absolute; top:70px;}
+
+#scroll_wrap_r .prev { left: 0; background: url("../images/scroll_bg.png") no-repeat;}
+#scroll_wrap_r .next { right:0; background: url("../images/scroll_bg.png") no-repeat 0 -43px;}
+
+.list_wrap {widows: 615px; margin: 0n auto; padding-top: 32px; background: yellow;}
+.list_wrap ul { height: 150px;}
+.list_wrap li {width: 205px; float: left;}
+.list_wrap a, .list_wrap p { width: 145px; margin: 0 auto;}
+.list_wrap a {display: block; height: 100px;}
+.list_wrap p {font-size: 12px; color: #600; text-align: center; line-height: 14px; padding-top: 10px;}
+
+
+/*一塌糊涂 注意区分 # 和 . !!!*/
+#rooter {width: 1660px; height: 317px; margin: 0 auto;  position: relative;} 
+
+#rooter #foot_info { height: 60px; background: url("../images/foot_bg.png") repeat-x; margin: 0 auto;}
+#rooter #foot_info p{ text-align: center;}
+.ico1, .ico2, .p1, .p2 {color: #cbcbcb; font-size: 14px; font-weight: bold; font-family: arial; height: 52px;  position: absolute; top: 0;}
+.p1, .p2 {margin: 25px auto;  }
+.p1 { left: 400px;}
+.p2 {left: 720px;}
+.ico1 { float: left; left: 340px; margin-top: 4px;}
+.ico2 { float: left; left: 660px; margin: 12px;}
+
+#rooter .search { top: 15px; left: 950px;}
+
+#rooter #foot_link { height: 242px; background: url("../images/foot_bg.png") repeat-x 0 -60px; position: relative;}
+#rooter #foot_link dl {float: left;}
+#rooter #foot_link dd, #rooter #foot_link span { font-size: 13px; font-weight: normal;}
+#rooter #foot_link h4 {color: #ffffff; font-size: 15px; font-weight: bold; padding-left: 15px;}
+#foot_link_dt{  position: absolute;top: 0;left: 370px;}
+#rooter #foot_link dd {color: #cfcfcf; margin: 0 25px;}
+#foot_link_ul { padding-left: 350px; margin-top: 10px;}
+#rooter #foot_link span {color: #ffcc00; }
